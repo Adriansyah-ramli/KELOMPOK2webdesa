@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+      .custom-brand {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-shadow: 
+          3px 3px 0 #000,
+          -1px -1px 0 #000,  
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+      }
+
+      .custom-brand:hover {
+        color: #ffd700;
+        transform: scale(1.05);
+        text-shadow: 
+          4px 4px 0 #000,
+          -1px -1px 0 #000,  
+          1px -1px 0 #000,
+          -1px 1px 0 #000,
+          1px 1px 0 #000;
+      }
+      .custom-carousel {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      .custom-carousel .carousel-item {
+        height: 50vh;
+        min-height: 300px;
+        background: no-repeat center center scroll;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      .custom-carousel .carousel-item img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+      }
+
+      /* Login form styles */
+      .card {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .card-body {
+        background: linear-gradient(145deg, #f3f3f3, #ffffff);
+      }
+
+      .form-control {
+        border-radius: 25px;
+        padding: 10px 20px;
+      }
+
+      .btn-primary {
+        border-radius: 25px;
+        padding: 10px 20px;
+        background: linear-gradient(145deg, #007bff, #0056b3);
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+      }
+
+      .form-check-input:checked {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+
+      /* Navbar button styles */
+      .navbar .btn {
+        padding: 0.375rem 1rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .navbar .btn-outline-light {
+        color: #ffffff;
+        border-color: #ffffff;
+      }
+
+      .navbar .btn-outline-light:hover {
+        color: #ffffff;
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+
+      .navbar-nav .dropdown-menu {
+        background-color: #343a40;
+      }
+
+      .navbar-nav .dropdown-item {
+        color: rgba(255,255,255,.55);
+      }
+
+      .navbar-nav .dropdown-item:hover,
+      .navbar-nav .dropdown-item:focus {
+        background-color: #495057;
+        color: #fff;
+      }
+
+      .news-card {
+        height: 100%;
+      }
+
+      .news-card .card-img-top {
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .news-card .card-body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .news-card .card-text {
+        flex-grow: 1;
+      }
+
+      .card-img-top.peta-desa {
+        height: 400px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        .card-img-top.peta-desa {
+          height: 300px;
+        }
+      }
+
+      .list-group-item {
+        transition: background-color 0.3s ease;
+      }
+
+      .list-group-item:hover {
+        background-color: #f8f9fa;
+      }
+
+      .list-group-item span {
+        font-weight: bold;
+        color: #007bff;
+      }
+
+      .card-body img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px) {
+        .card-body img {
+          max-width: 100%;
+        }
+      }
+
+      .member-card {
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .member-card:hover {
+        transform: scale(1.05);
+      }
+
+      .member-card .card-header {
+        font-weight: bold;
+      }
+
+      .member-card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+
+      .member-card .card-body {
+        text-align: center;
+      }
+
+      .member-card .card-text {
+        margin-bottom: 0.5rem;
+      }
+
+      #strukturDesaCarousel .carousel-item {
+        padding: 20px;
+      }
+
+      #strukturDesaCarousel .member-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      #strukturDesaCarousel .carousel-control-prev,
+      #strukturDesaCarousel .carousel-control-next {
+        width: 5%;
+      }
+
+      #strukturDesaCarousel .carousel-control-prev-icon,
+      #strukturDesaCarousel .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        padding: 20px;
+      }
+
+      .card-body ol, .card-body ul {
+        padding-left: 20px;
+      }
+
+      .card-body li {
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .card-body {
+          font-size: 0.9rem;
+        }
+      }
+
+      .grafik-pekerjaan {
+        max-width: 100%;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand custom-brand" href="index.html">Desa Mass</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProfil" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Profil Desa
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownProfil">
+                <li><a class="dropdown-item" href="visimisi.html">Visi Misi</a></li>
+                <li><a class="dropdown-item" href="sejarahdesa.html">Sejarah Desa</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pemerintahan Desa</a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownData" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Data Desa
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownData">
+                <li><a class="dropdown-item" href="data-penduduk.html">Data Penduduk</a></li>
+                <li><a class="dropdown-item" href="data-pekerjaan.html">Data Pekerjaan</a></li>
+                <li><a class="dropdown-item" href="pendapatan-desa.html">Pendapatan Desa</a></li>
+                <li><a class="dropdown-item" href="dana.html">Dana Desa</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a class="btn btn-outline-light me-2" href="login.html">Login</a>
+            <a class="btn btn-primary" href="login.html">Daftar</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!---->
+
+
+    <!-- Visi Misi Desa -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Visi dan Misi Desa Mass</h2>
+      <div class="card">
+        <div class="card-body">
+          
+          
+          <h4>1. Visi</h4>
+          <p>Visi Desa Mass adalah "Mewujudkan Desa Mass yang Mandiri, Sejahtera, dan Berbudaya". Visi ini mencerminkan aspirasi untuk menjadi desa yang:</p>
+          <p>a. Mandiri: Desa Mass bertujuan untuk mampu mengelola sumber daya lokal dan memenuhi kebutuhan dasar masyarakat secara swadaya.</p>
+          <p>b. Sejahtera: Desa Mass berkomitmen untuk meningkatkan taraf hidup dan kesejahteraan seluruh warga desa.</p>
+          <p>c. Berbudaya: Desa Mass berupaya untuk melestarikan dan mengembangkan kearifan lokal serta nilai-nilai budaya yang positif.</p>
+
+          <h4>2. Misi</h4>
+          <p>Untuk mewujudkan visi tersebut, Desa Mass telah menetapkan misi sebagai berikut:</p>
+          <p>a. Meningkatkan kualitas sumber daya manusia melalui pendidikan dan pelatihan. Hal ini dilakukan dengan fokus pada pengembangan kapasitas warga melalui pendidikan formal dan non-formal, serta pelatihan keterampilan.</p>
+          <p>b. Mengembangkan potensi ekonomi lokal berbasis pertanian dan pariwisata. Misi ini bertujuan untuk memanfaatkan dan mengoptimalkan sektor pertanian dan pariwisata sebagai penggerak ekonomi desa.</p>
+          <p>c. Melestarikan dan mengembangkan nilai-nilai budaya lokal. Desa Mass berkomitmen untuk menjaga warisan budaya dan mendorong kreativitas dalam pengembangan seni dan budaya desa.</p>
+          <p>d. Meningkatkan infrastruktur desa untuk mendukung aktivitas warga. Hal ini dilakukan dengan membangun dan memperbaiki fasilitas umum untuk mendukung aktivitas dan produktivitas warga.</p>
+          <p>e. Menciptakan tata kelola pemerintahan desa yang transparan dan akuntabel. Misi ini bertujuan untuk menerapkan prinsip transparansi dan akuntabilitas dalam pengelolaan desa.</p>
+
+          <p class="mt-4">Dengan visi dan misi ini, Desa Mass berharap dapat menciptakan lingkungan yang kondusif bagi pertumbuhan dan perkembangan masyarakat, serta menjadi contoh bagi desa-desa lain dalam hal pembangunan dan pengelolaan desa yang berkelanjutan.</p>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Cetak </button>
+      </div>
+    </div>
+    <!-- End Visi Misi Desa -->
+  
+    <!-- Footer -->
+    <footer class="bg-dark text-light mt-5">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col-md-4 mb-2">
+              <h6>Tentang Desa Mass</h6>
+              <p class="small">Desa Mass adalah desa yang indah dan makmur dengan beragam potensi alam dan budaya.</p>
+            </div>
+            <div class="col-md-4 mb-2">
+              <h6>Kontak Kami</h6>
+              <ul class="list-unstyled small">
+                <li><i class="fas fa-map-marker-alt me-2"></i>Jl. Desa Mass No. 123, Kecamatan Example, Kabupaten Sample</li>
+                <li><i class="fas fa-phone me-2"></i>(0123) 456-7890</li>
+                <li><i class="fas fa-envelope me-2"></i>info@desamass.com</li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-2">
+              <h6>Ikuti Kami</h6>
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-facebook fa-lg"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-twitter fa-lg"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="text-light"><i class="fab fa-instagram fa-lg"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bg-secondary py-2">
+          <div class="container text-center">
+            <small>&copy; 2023 Desa Mass. All rights reserved.</small>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+  
+      <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+  </html>

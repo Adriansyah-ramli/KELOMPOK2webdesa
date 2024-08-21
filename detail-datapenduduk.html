@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desa Mass</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+  <style>
+    .main-sidebar {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .sidebar {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .sidebar-bottom {
+      padding: 10px;
+      border-top: 1px solid #4f5962;
+    }
+
+    .sidebar-bottom .btn {
+      text-align: left;
+    }
+
+    /* Tambahkan CSS berikut untuk efek hover */
+    .nav-sidebar .nav-item:not(.menu-open) > .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .nav-sidebar .nav-item:not(.menu-open) > .nav-link:hover i {
+      color: #ffffff;
+    }
+
+    .nav-treeview > .nav-item > .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+ 
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+     
+      <span class="brand-text font-weight-light"><center><b>Admin Desa Mass</b></center></span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      
+      
+      
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profil-desa.html" class="nav-link">
+              <i class="nav-icon fas fa-info-circle"></i>
+              <p>Profil Desa</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="pemerintahan.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>Pemerintahan Desa</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="peta.html" class="nav-link">
+              <i class="nav-icon fas fa-map-marked-alt"></i>
+              <p>Peta Desa</p>
+            </a>
+          </li>
+          <!--Drop down-->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-database"></i>
+              <p>
+                Data Desa
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="data-penduduk.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Penduduk</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pekerjaan.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data Pekerjaan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pendapatan.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pendapatan Desa</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="dana.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dana Desa</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--/Drop down-->
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+    
+    <!-- Back to Home -->
+    <div class="sidebar-bottom">
+      <a href="../index.html" class="btn btn-primary btn-block">
+        <i class="fas fa-arrow-left mr-2"></i>Kembali ke Beranda
+      </a>
+    </div>
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Detail Data Penduduk</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+              <li class="breadcrumb-item"><a href="data-penduduk.html">Data Penduduk</a></li>
+              <li class="breadcrumb-item active">Detail Data Penduduk</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Detail Penduduk</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4">
+                    <img id="fotoPenduduk" src="" alt="Foto Penduduk" class="img-fluid img-thumbnail mb-3">
+                  </div>
+                  <div class="col-md-8">
+                    <table class="table table-bordered">
+                      <tr>
+                        <th style="width: 30%">NIK</th>
+                        <td id="nik"></td>
+                      </tr>
+                      <tr>
+                        <th>Nama</th>
+                        <td id="nama"></td>
+                      </tr>
+                      <tr>
+                        <th>Jenis Kelamin</th>
+                        <td id="jenisKelamin"></td>
+                      </tr>
+                      <tr>
+                        <th>Tempat Lahir</th>
+                        <td id="tempatLahir"></td>
+                      </tr>
+                      <tr>
+                        <th>Tanggal Lahir</th>
+                        <td id="tanggalLahir"></td>
+                      </tr>
+                      <tr>
+                        <th>Agama</th>
+                        <td id="agama"></td>
+                      </tr>
+                      <tr>
+                        <th>Pendidikan</th>
+                        <td id="pendidikan"></td>
+                      </tr>
+                      <tr>
+                        <th>Pekerjaan</th>
+                        <td id="pekerjaan"></td>
+                      </tr>
+                      <tr>
+                        <th>Kartu Keluarga</th>
+                        <td id="kartuKeluarga"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <a href="data-penduduk.html" class="btn btn-secondary">Kembali</a>
+                <button class="btn btn-primary" id="editPenduduk">Edit Data</button>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <center><strong>Kelompok 2</a>.</strong>Sistem Informasi Desa.</center>
+    
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Fungsi untuk mendapatkan parameter dari URL
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
+  // Mendapatkan ID penduduk dari parameter URL
+  var id = getUrlParameter('id');
+
+  // Simulasi data penduduk (ganti dengan data sebenarnya dari database)
+  var dataPenduduk = {
+    1: {nik: "3501234567890001", nama: "michelle", jenisKelamin: "Perempuan", tempatLahir: "Fakfak", tanggalLahir: "1990-01-01", agama: "Kristen", pendidikan: "S1", pekerjaan: "Wiraswasta", kartuKeluarga: "KK_001.pdf", foto: "img/wo.jpg"},
+    2: {nik: "3501234567890002", nama: "arwan rumakamar", jenisKelamin: "laki-laki", tempatLahir: "Fakfak", tanggalLahir: "1992-05-15", agama: "Islam", pendidikan: "SMA", pekerjaan: "Nelayan", kartuKeluarga: "KK_002.pdf", foto: "img/foto1.jpeg"},
+    3: {nik: "3501234567890003", nama: "Kezia basary", jenisKelamin: "perempuan", tempatLahir: "Fakfak", tanggalLahir: "1992-06-25", agama: "Kristen", pendidikan: "SMA", pekerjaan: "Guru", kartuKeluarga: "KK_003.pdf", foto: "img/foto4.jpeg"},
+    4: {nik: "3501234567890004", nama: "apryan sumah", jenisKelamin: "laki-laki", tempatLahir: "Fakfak", tanggalLahir: "1992-06-25", agama: "Kristen", pendidikan: "SMA", pekerjaan: "petani", kartuKeluarga: "KK_004.pdf", foto: "img/foto3.jpeg"},
+    5: {nik: "3501234567890005", nama: "sidiq iba", jenisKelamin: "laki-laki", tempatLahir: "Fakfak", tanggalLahir: "1993-06-25", agama: "Islam", pendidikan: "SMA", pekerjaan: "Nelayan", kartuKeluarga: "KK_005.pdf", foto: "img/foto5.jpeg"},
+    6: {nik: "3501234567890005", nama: "sarwan kelean", jenisKelamin: "laki-laki", tempatLahir: "Fakfak", tanggalLahir: "1993-06-25", agama: "Islam", pendidikan: "SMA", pekerjaan: "Nelayan", kartuKeluarga: "KK_005.pdf", foto: "img/foto.jpeg"},
+    7: {nik: "3501234567890007", nama: "angga", jenisKelamin: "laki-laki", tempatLahir: "Fakfak", tanggalLahir: "1991-06-25", agama: "Islam", pendidikan: "SMA", pekerjaan: "Nelayan", kartuKeluarga: "KK_007.pdf", foto: "img/foto7.jpeg"},
+    8: {nik: "3501234567890008", nama: "nazwa afiqa", jenisKelamin: "perempuan", tempatLahir: "Fakfak", tanggalLahir: "1992-06-11", agama: "Islam", pendidikan: "SMA", pekerjaan: "Guru", kartuKeluarga: "KK_008.pdf", foto: "img/foto9.jpeg"},
+    9: {nik: "3501234567890009", nama: "alfaris", jenisKelamin: "laki-laki", tempatLahir: "Fakfak", tanggalLahir: "1992-06-25", agama: "Kristen", pendidikan: "SMA", pekerjaan: "Guru", kartuKeluarga: "KK_009.pdf", foto: "img/foto2.jpeg"},
+    10: {nik: "3501234567890010", nama: "jesica", jenisKelamin: "perempuan", tempatLahir: "Fakfak", tanggalLahir: "1993-06-25", agama: "Islam", pendidikan: "SMA", pekerjaan: "Wiraswasta", kartuKeluarga: "KK_005.pdf", foto: "img/foto10.jpeg"}
+  };    
+
+  // Mengisi data penduduk ke dalam tabel
+  if (dataPenduduk[id]) {
+    var penduduk = dataPenduduk[id];
+    document.getElementById('nik').textContent = penduduk.nik;
+    document.getElementById('nama').textContent = penduduk.nama;
+    document.getElementById('jenisKelamin').textContent = penduduk.jenisKelamin;
+    document.getElementById('tempatLahir').textContent = penduduk.tempatLahir;
+    document.getElementById('tanggalLahir').textContent = penduduk.tanggalLahir;
+    document.getElementById('agama').textContent = penduduk.agama;
+    document.getElementById('pendidikan').textContent = penduduk.pendidikan;
+    document.getElementById('pekerjaan').textContent = penduduk.pekerjaan;
+    document.getElementById('kartuKeluarga').textContent = penduduk.kartuKeluarga;
+    document.getElementById('fotoPenduduk').src = penduduk.foto;
+  } else {
+    alert('Data penduduk tidak ditemukan');
+  }
+
+  // Event listener untuk tombol Edit
+  document.getElementById('editPenduduk').addEventListener('click', function() {
+    // Implementasi fungsi edit di sini
+    alert('Fitur edit belum diimplementasikan');
+  });
+});
+</script>
+</body>
+</html>
